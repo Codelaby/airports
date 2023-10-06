@@ -105,6 +105,33 @@ create table
 - Se ha creado un índice espacial en la tabla de aeropuertos para la columna `location` utilizando el método GIST.
 - Se ha creado un índice en la tabla de aeropuertos para la columna `geohash` utilizando el método B-Tree.
 
+### Relleno de Datos a Través de CSV en el Dashboard de Supabase
+
+Los datos que necesitas están disponibles en los archivos CSV ubicados en la carpeta correspondiente. Puedes acceder a los datos de los aeropuertos en el archivo "airports_rows.csv" y los datos relacionados con códigos IATA en el archivo "iata_ext_rows.csv". Estos archivos contienen la información que necesitas para llenar las tablas correspondientes en tu base de datos.
+
+Supabase ofrece una forma sencilla y eficiente de llenar tus tablas con datos utilizando archivos CSV a través de su intuitivo dashboard. Sigue estos pasos para importar datos mediante un archivo CSV:
+
+1. **Iniciar Sesión en Supabase**: Accede al panel de control de Supabase utilizando tus credenciales de inicio de sesión.
+
+2. **Seleccionar el Proyecto**: En el panel de control, selecciona el proyecto en el que deseas cargar los datos.
+
+3. **Navegar a la Tabla**: Dirígete a la tabla específica en la que deseas importar los datos. Si la tabla aún no está creada, puedes crear una nueva desde el dashboard de Supabase.
+
+4. **Importar Datos**: Una vez en la tabla, busca la opción de importar datos. Por lo general, se encuentra en el menú o barra de herramientas, identificada como "Importar" o "Cargar Datos".
+
+5. **Seleccionar Archivo CSV**: Haz clic en "Seleccionar Archivo" y elige el archivo CSV que contiene los datos que deseas cargar en la tabla. Asegúrate de que el formato del archivo CSV sea correcto y que coincida con la estructura de la tabla.
+
+6. **Mapeo de Columnas**: Supabase te permitirá mapear las columnas del archivo CSV con las columnas de la tabla. Asegúrate de que las correspondencias sean precisas para que los datos se importen correctamente.
+
+7. **Configuración de Importación**: Dependiendo de la configuración de Supabase, es posible que se te ofrezcan opciones adicionales, como la especificación del delimitador de campos o el formato de fecha y hora. Ajusta estas opciones según sea necesario.
+
+8. **Ejecutar la Importación**: Una vez que hayas configurado todo según tus preferencias, inicia el proceso de importación haciendo clic en el botón "Importar" o "Cargar".
+
+9. **Esperar a que se Complete**: Supabase procesará el archivo CSV y cargará los datos en la tabla. El tiempo necesario dependerá del tamaño del archivo y la cantidad de datos que contenga.
+
+10. **Verificar los Datos**: Una vez que se haya completado la importación, verifica los datos en la tabla para asegurarte de que se hayan cargado correctamente.
+
+¡Y eso es todo! Ahora has llenado con éxito tu tabla en Supabase utilizando un archivo CSV a través del dashboard. Esta opción es ideal para la importación de grandes conjuntos de datos de manera eficiente.
 
 ## Uso
 
