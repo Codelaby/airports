@@ -110,6 +110,19 @@ create table
 
 Estos datos pueden ser utilizados para crear y poblar tablas en una base de datos PostgreSQL. Asegúrate de respetar las restricciones y las claves únicas definidas en las tablas.
 
+### Búsqueda de Aeropuertos Cercanos a Barcelona
+
+Para obtener una lista de aeropuertos cercanos a Barcelona, con coordenadas geográficas aproximadas de longitud 2.170171 y latitud 41.387077, puedes utilizar la siguiente consulta SQL:
+
+```sql
+SELECT *
+FROM public.airports
+WHERE ST_DWithin(location, ST_SetSRID(ST_Point(2.170171, 41.387077), 4326), 30000);
+```
+
+Esta consulta utiliza la función `ST_DWithin` de PostgreSQL para encontrar aeropuertos que se encuentren dentro de un radio de 30,000 metros (30 kilómetros) de las coordenadas especificadas de Barcelona. Los resultados te proporcionarán información detallada sobre los aeropuertos cercanos, incluyendo su ubicación geográfica.
+
+
 ## Contribuciones
 
 Si deseas contribuir o realizar mejoras en estos datos, te animamos a hacerlo. Siéntete libre de enviar una solicitud de extracción (pull request) o informar de problemas (issues) relacionados con los datos.
